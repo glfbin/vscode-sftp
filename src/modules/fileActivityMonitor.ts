@@ -4,6 +4,7 @@ import app from '../app';
 import StatusBarItem from '../ui/statusBarItem';
 import { onDidOpenTextDocument, onDidSaveTextDocument, showConfirmMessage } from '../host';
 import { readConfigsFromFile } from './config';
+import { configwatcher } from './Configwatcher';
 import {
   createFileService,
   getFileService,
@@ -18,6 +19,10 @@ let workspaceWatcher: vscode.Disposable;
 async function handleConfigSave(uri: vscode.Uri) {
   const workspaceFolder = vscode.workspace.getWorkspaceFolder(uri);
   if (!workspaceFolder) {
+    return;
+  }
+  
+  if (!configwatcher.isConfigChange(uri)) {
     return;
   }
 
@@ -124,12 +129,16 @@ function init() {
     onDidSaveFile: handleFileSave,
     onDidSaveSftpConfig: handleConfigSave,
   });
+  
+  configwatcher.watche(handleConfigSave);
 }
 
 function destory() {
   if (workspaceWatcher) {
     workspaceWatcher.dispose();
   }
+  
+  configwatcher.destory();
 }
 
 export default {
