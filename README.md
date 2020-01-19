@@ -20,6 +20,11 @@ Very powerful, with smart features. Very simple, requires just three lines of co
 - [Debug](#debug)
 - [Support SFTP Project](#Donation)
 
+## Huawei-Extension
+1. Add new command "sftp:active" to active sftp plugin.
+2. Auto reload "sftp.json" when the config is changed.
+3. File or folder not exist error message log to sftp channel instead of popup.
+
 ## Usage
  If your latest files are on the server, you can start with an empty local folder, then download your project, and from that point sync.  
 
