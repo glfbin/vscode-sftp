@@ -75,6 +75,11 @@
     },
     "commands": [
       {
+        "command": "sftp.active",
+        "title": "Active sftp plugin",
+        "category": "SFTP"
+      },
+      {
         "command": "sftp.config",
         "title": "Config",
         "category": "SFTP"
