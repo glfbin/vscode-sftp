@@ -403,15 +403,21 @@ export async function transfer(
   config: TransferHandleConfig<TransferOption>,
   collect: (t: TransferTask) => void
 ) {
-  const stat = await config.srcFs.lstat(config.srcFsPath).catch(e => {
-    return {
-      type: e,
-      mode: 0,
-      size: 0,
-      mtime: 0,
-      atime: 0,
-    };
-  });
+  const silentTransfer = vscode.workspace.getConfiguration('sftp').get('silentTransfer', false);
+  let stat: any;
+  if (silentTransfer) {
+    stat = await config.srcFs.lstat(config.srcFsPath).catch(e => {
+      return {
+        type: e,
+        mode: 0,
+        size: 0,
+        mtime: 0,
+        atime: 0,
+      };
+    });
+  } else {
+    stat = await config.srcFs.lstat(config.srcFsPath);
+  }
   const transferOption = {
     ...config.transferOption,
     fallbackMode: stat.mode,
