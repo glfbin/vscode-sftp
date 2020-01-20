@@ -23,7 +23,7 @@ Very powerful, with smart features. Very simple, requires just three lines of co
 ## Huawei-Extension
 1. Add new command "sftp:active" to active sftp plugin.
 2. Auto reload "sftp.json" when the config is changed.
-3. File or folder not exist error message log to sftp channel instead of popup.
+3. Print log on sftp output channel when remote file or folder not exist instead of popup. Need to set silentTransfer config to true.
 
 ## Usage
  If your latest files are on the server, you can start with an empty local folder, then download your project, and from that point sync.  
