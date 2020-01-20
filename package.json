@@ -70,6 +70,11 @@
           "type": "boolean",
           "default": false,
           "description": "\"Download\" instead of \"View Content\" when open file in Remote Explorer"
+        },
+        "sftp.silentTransfer": {
+          "type": "boolean",
+          "default": false,
+          "description": "print log on sftp output channel when remote file or folder not exist"
         }
       }
     },
