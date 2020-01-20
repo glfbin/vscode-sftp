@@ -11,6 +11,7 @@ import { FileHandleOption } from '../option';
 import { flatten } from '../../utils';
 import logger from '../../logger';
 import { getOpenTextDocuments } from '../../host';
+import * as vscode from 'vscode';
 
 interface InternalTransferOption extends FileHandleOption, TransferTaskTransferOption {}
 
