@@ -1,3 +1,8 @@
+## 100.12.9 - 2020-01-20
+  * Add new command "sftp:active" to active sftp plugin.
+  * Auto reload "sftp.json" when the config is changed.
+  * Print log on sftp output channel when remote file or folder not exist instead of popup. Need to set silentTransfer config to true.
+  
 ## 1.12.3 - 2019-04-27
   * Minor improvements.
   * Bug fix.
