@@ -1,4 +1,3 @@
-
 import { checkCommand } from './abstract/createCommand';
 
 export default checkCommand({
