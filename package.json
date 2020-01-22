@@ -27,7 +27,7 @@
     "remote"
   ],
   "activationEvents": [
-    "onCommand:sftp.active",
+    "onCommand:sftp.reloadConfig",
     "onCommand:sftp.config",
     "workspaceContains:.vscode/sftp.json"
   ],
