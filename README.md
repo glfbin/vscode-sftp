@@ -21,7 +21,7 @@ Very powerful, with smart features. Very simple, requires just three lines of co
 - [Support SFTP Project](#Donation)
 
 ## Huawei-Extension
-1. Add new command "sftp:active" to active sftp plugin.
+1. Add new command "sftp:reloadConfig" to reload sftp.json.
 2. Auto reload "sftp.json" when the config is changed.
 3. Print log on sftp output channel when remote file or folder not exist instead of popup. Need to set silentTransfer config to true.
 
