@@ -80,8 +80,8 @@
     },
     "commands": [
       {
-        "command": "sftp.active",
-        "title": "Active Sftp Plugin",
+        "command": "sftp.reloadConfig",
+        "title": "Reload sftp.json",
         "category": "SFTP"
       },
       {
